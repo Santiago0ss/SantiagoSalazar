@@ -1,7 +1,7 @@
 header {
     width: 100%;
     height: 68px;
-    background-color: #171a21;
+    background-color: #000129;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@ header {
 nav {
     width: 80%;
     height: 50px;
-    background-color: #2d3445;
+    background-color: #00004b;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -35,9 +35,10 @@ nav div {
 }
 
 nav div:hover {
-    background-color: #02a5c2;
+    background-color: #000000;
     border-radius: 16px;
-    transition: all 0.5s ease 0s;
+    transition: all 0.4s ease 0s;
+    box-shadow: 0 0 4px 0 white;
 }
 
 div a {
@@ -51,13 +52,10 @@ div a {
 
 @media (min-width: 600px) {
     header {
-        gap: 30px;
+        gap: 60px;
     }
     header .imgContainer {
-        background-color: black;
         position: relative;
-        width: 20px;
-        height: 20px;
     }
     nav {
         max-width: 500px;
@@ -67,6 +65,12 @@ div a {
     }
     div a {
         font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        gap: 100px;
     }
 }
 
