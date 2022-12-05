@@ -13,5 +13,73 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    max-width: 1327px;
+    color: white;
 }
 
+/* Titulo sobre mi*/
+
+.wrapper {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.wrapper h3 {
+    text-transform: uppercase;
+    -webkit-transform: translate(-50%, -50%) skew(-10deg, 0);
+    transform: translate(-50%, -50%) skew(-10deg, 0);
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    font-weight: 400;
+    white-space: nowrap;
+    color: #7778a7;
+    letter-spacing: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+.wrapper h3::after,
+.wrapper h3::before {
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    content: attr(data-heading);
+    position: absolute;
+}
+
+.wrapper h3::after {
+    left: -15px;
+    top: -15px;
+    z-index: 2;
+    -webkit-text-stroke: 3px #3538da;
+    -webkit-text-fill-color: transparent;
+}
+
+.wrapper h3::before {
+    z-index: -1;
+    left: 15px;
+    top: 15px;
+    color: #0003bb;
+}
+
+.wrapper h3:hover::after {
+    left: -20px;
+    top: -20px;
+}
+
+.wrapper h3:hover::before {
+    left: 20px;
+    top: 20px;
+}
+
+/* Fin titulo sobre mi*/
+
+.aboutMe p {
+    font-size: 1rem;
+    font-family: cursive;
+    letter-spacing: 2px;
+}
